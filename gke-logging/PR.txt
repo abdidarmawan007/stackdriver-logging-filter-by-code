@@ -1,0 +1,12 @@
+
+
+- why we need logging
+
+- archiving logging benefit 
+  cloudstorage coldline as archiving
+
+
+- put code Dokerfile and log code in dummy github
+
+
+- logic in CI for create new filter

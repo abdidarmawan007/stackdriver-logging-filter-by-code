@@ -1,0 +1,20 @@
+## NOTE how to create filter log with cloud / gcp sdk
+## gcloud beta logging metrics create php-test-403 --config-from-file={yaml log location}
+## gcloud beta logging metrics create php-test-403 --config-from-file=/home/devops/abdi-learning/gke-logging/logging.yaml
+---
+description: php-test-403
+filter: |
+  resource.type="k8s_container"
+  resource.labels.cluster_name="standard-cluster"
+  resource.labels.namespace_name="default"
+  resource.labels.container_name="node-web-1"
+  textPayload:("403" AND "GET" AND "zgrab")
+metricDescriptor:
+  description: php-test-403
+  metricKind: DELTA
+# NOTE = change to your project name gcp, example project staging = "carbon-airlock-90208" also name log filter = php-test-403
+  name: projects/carbon-airlock-90208/metricDescriptors/logging.googleapis.com/user/php-test-403
+  type: logging.googleapis.com/user/php-test-403
+  unit: '1'
+  valueType: INT64
+name: php-test-403

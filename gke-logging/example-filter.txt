@@ -1,0 +1,10 @@
+
+
+https://cloud.google.com/logging/docs/view/advanced-filters
+
+textPayload:("404")
+
+textPayload:("403" AND "GET")
+
+textPayload:("403" AND "GET" AND "Mac")
+
